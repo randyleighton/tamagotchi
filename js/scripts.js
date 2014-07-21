@@ -1,15 +1,12 @@
 var Tamagotchi = {
   feed: function(){
     this.foodLevel = this.foodLevel + 1;
-    return this.foodLevel;
   },
   sleep: function(){
     this.sleepLevel = this.sleepLevel +1;
-    return this.sleepLevel;
   },
   activity: function(){
     this.activityLevel = this.activityLevel + 1;
-    return this.activityLevel;
   },
   initialize: function(name) {
     this.name = name;
@@ -17,9 +14,19 @@ var Tamagotchi = {
     this.sleepLevel = 10;
     this.activityLevel = 10;
   },
+  timePasses: function(){
+    this.foodLevel = this.foodLevel - 1;
+    this.sleepLevel = this.sleepLevel - 1;
+    this.activityLevel = this.activityLevel - 1;
+  },
+  checkIn: function(){
+    this.timePasses();
+    this.alive();
+  },
+
   alive: function() {
-    if ((foodLevel <= 0) || (sleepLevel <= 0) ||
-      (activityLevel <= 0)) {
+    if ((this.foodLevel <= 0) || (this.sleepLevel <= 0) ||
+      (this.activityLevel <= 0)) {
       //he is dead
       this.isAlive = false;
     }else {
