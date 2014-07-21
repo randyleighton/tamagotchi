@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <script src="js/jquery-1.11.1.js"></script>
+  <script src="js/scripts.js"></script>
+
+  <title>Tamagatchi</title>
+</head>
+<body>
+  <div class='jumbotron'>
+    <h1 class='row col-sm-offset-2'>My Pet Tammy! </h1>
+    <h2 class='row col-sm-offset-2'>Feed, sleep, and play with</h2>
+  </div>
+
+  <div class='container'>
+    <h3>Living life one click at a time</h3>
+    <div class='row'>
+      <div class='col-md-3' id ='column1'>
+        <form role='form' id='tamagotchiGame'>
+          <div class='form-group'>
+            <label for='initName'>Name your pet</label>
+            <input id='petName' class='form-control' type='text'>
+            <button type = 'submit' id='name-btn' class='btn btn-default'>Add Name</button>
+          </div>
+        </form>
+      </div>
+      <div class='col-md-9' id ='column2'>
+        <button type = 'button' class='interactive btn btn-default' id='feed-btn'>Feed Pet</button>
+        <button type='button' class='interactive btn btn-default' id='sleep-btn'>Sleep</button>
+        <button type='button' class='interactive btn btn-default' id='activity-btn'>Play</button>
+      </div>
+    </div>
+    <div class ='row'>
+      <div id='output-name' class='col-md-3'>
+      </div>
+      <div class='col-md-3'>
+        <h3>Food Level</h3>
+        <div id='output-food'></div>
+      </div>
+      <div class='col-md-3'>
+        <h3>Sleep Level</h3>
+        <div id='output-sleep'></div>
+      </div>
+      <div class='col-md-3'>
+        <h3>Activity Level</h3>
+        <div id='output-activity'></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
