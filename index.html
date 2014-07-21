@@ -17,24 +17,27 @@
   </div>
 
   <div class='container'>
-    <h3>Living life one click at a time</h3>
     <div class='row'>
       <div class='col-md-3' id ='column1'>
         <form role='form' id='tamagotchiGame'>
           <div class='form-group'>
             <label for='initName'>Name your pet</label>
             <input id='petName' class='form-control' type='text'>
-            <button type = 'submit' id='name-btn' class='btn btn-default'>Add Name</button>
+            <button type = 'submit' id='name-btn' class='btn btn-primary'>Add Name</button>
           </div>
         </form>
       </div>
-      <div class='col-md-9' id ='column2'>
-        <button type = 'button' class='interactive btn btn-default' id='feed-btn'>Feed Pet</button>
-        <button type='button' class='interactive btn btn-default' id='sleep-btn'>Sleep</button>
-        <button type='button' class='interactive btn btn-default' id='activity-btn'>Play</button>
+      <div class='col-md-6' id ='column2'>
+        <button type = 'button' class='btn btn-success col2-style' id='feed-btn'>Feed Pet</button>
+        <button type='button' class='btn btn-success col2-style' id='sleep-btn'>Sleep</button>
+        <button type='button' class='btn btn-success col2-style' id='activity-btn'>Play</button>
+      </div>
+      <div class='col-md-3' id ='column3'>
+        <h5>Use 'Check in' to increment time and check pet status</h5>
+        <button type = 'button' class='interactive btn btn-warning' id='check-btn'>Check in on Pet</button>
       </div>
     </div>
-    <div class ='row'>
+    <div class ='row' id='output-row'>
       <div id='output-name' class='col-md-3'>
       </div>
       <div class='col-md-3'>

@@ -3,7 +3,7 @@ describe("Tamagotchi", function() {
     it("sets the name and food sleep and activity levels", function() {
       var myPet = Object.create(Tamagotchi);
       myPet.initialize("lil dragon");
-      myPet.name.should.equal("lil dragon");
+      myPet.tName.should.equal("lil dragon");
       myPet.foodLevel.should.equal(10);
       myPet.sleepLevel.should.equal(10);
       myPet.activityLevel.should.equal(10);

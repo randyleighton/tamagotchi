@@ -32,18 +32,46 @@ var Tamagotchi = {
       //he is alive
       this.isAlive = true;
     }
+  },
+  displayOutput: function() {
+    $("#output-food").text(this.foodLevel);
+    $("#output-sleep").text(this.sleepLevel);
+    $("#output-activity").text(this.activityLevel);
   }
-}
+};
 
 $(document).ready(function(){
+
+  $("form#tamagotchiGame").find("input").focus();
+
   $('form#tamagotchiGame').submit(function(event){
+    $('#column2, #column3, #output-row').show();
     event.preventDefault();
     var myPet = Object.create(Tamagotchi);
     var petName = $('#petName').val();
     myPet.initialize(petName);
     $("#output-name").text(myPet.tName);
-    $("#output-food").text(myPet.foodLevel);
-    $("#output-sleep").text(myPet.sleepLevel);
-    $("#output-activity").text(myPet.activityLevel);
-  })
-})
+    myPet.displayOutput();
+    $("#check-btn").click(function() {
+      myPet.checkIn();
+      console.log(myPet.foodLevel);
+      myPet.displayOutput();
+      if (!myPet.isAlive){
+        alert('Sorry your pet is dead :(');
+        $('#column2, #column3, #output-row').hide();
+      }
+    });
+    $("#feed-btn").click(function(){
+      myPet.feed();
+      myPet.displayOutput();
+    });
+    $("#sleep-btn").click(function(){
+      myPet.sleep();
+      myPet.displayOutput();
+    });
+    $("#activity-btn").click(function(){
+      myPet.activity();
+      myPet.displayOutput();
+    });
+  });
+});

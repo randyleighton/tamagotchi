@@ -1,6 +1,15 @@
-#submitName {
+#name-btn {
   margin: .5em;
-};
-.interactive {
-  margin: 10em;
-};
+}
+
+.col2-style {
+  margin: 1em;
+}
+
+#output-name {
+  font-size: 3em;
+  max-width: fit-content;
+}
+#column3, #column2, #output-row{
+  display: none;
+}
